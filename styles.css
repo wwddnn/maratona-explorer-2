@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*ele conta tudo em funcao do tamanho da caixa */
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  html {
+    /*variaveis*/
+    --bg-color: #edf2ff;
+    --tex-color: #00082f;
+    --primary-color: #4263EB;
+    --primary-color-dark: #364FC7;
+  }
+  
+  body.dark-blue {
+    --bg-color: #00082F;
+    --text-color: #FFFFFF;
+  }
+  
+  body.pink {
+    --bg-color:#FFF0F6;
+    --text-color: #1F000B;
+    --primary-color: #D6336c;
+    --primary-color-dark: #A61E4D;
+  }
+  
+  body.dark-pink {
+    --bg-color:#1F000B;
+    --text-color: #FFF0F6;
+    --primary-color: #A61E4D;
+    --primary-color-dark: #D6336c;
+  }
+  
+  body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+  
+  }
+  
+  .container {
+    /*border: 7px red solid;*/
+    text-align: center;
+    width: 300px;
+    margin: 60px auto; /*em cima e embaixo quero zero px e nas laterais auto */
+  }
+  
+  img {
+    width: 100%; /* imagem vai seguir o container*/
+  
+  }
+  
+  img.avatar {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 3,7px;
+    border: var(--primary-color) solid 4px;
+  }
+  
+  h1 {
+    font-size: 32px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .username {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    opacity: 0.8;/*vai de zero a 10 fica mais leve*/
+  }
+  
+  ul {
+    list-style: none;
+    margin: 48px 0;
+  }
+  
+  /* display é uma propriedade de como a caixa se comporta em relacao as caixas irmãs ao redor dela.*/
+  ul li a {
+    height: 53px;
+    /*border: 1px solid red;*/
+    display: flex; /*destrava propriedades como margin, altura, largura etc*/
+    align-items: center;/*disponivel para display flex*/
+    justify-content: center; /*disponivel para display flex.alinha coisas dentro da caixa a*/
+    background: var(--primary-color); /* vai de zero a F*/
+    color: white;
+    text-transform: uppercase;/*poe em letra maiuscula*/
+    font-size: 14px;
+    margin-bottom: 16px;
+    border-radius: 6px;
+    transition: background 400ms;
+  }
+  
+  /* pseudo-class*/
+  ul li a:hover {
+    background: var(--primary-color-dark);
+  }
+  
+  footer {
+    font-weight: 500;
+    font-size: 12px;
+    opacity: 0.6; /*fica mais leve a fonte*/
+    transition: opacity 400ms;
+  }
+  
+  footer a {
+    color: var(--text-color);
+  }
+  
+  footer:hover {
+    opacity: 1;
+  }
+  
+  
